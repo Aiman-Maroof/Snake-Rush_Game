@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* button popup styling */
+/* Modal styles */
+.modal {
+    display: block; /* Initially, modal is visible */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+.modal-content {
+    background: linear-gradient(rgb(169, 233, 169), rgb(224, 224, 158));
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    background-color: #193f1a;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #45a049;
+}
+/* finish */
+
+
+
+
+
+.body{
+    background: url("data:image/jpeg;base64,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");
+    min-height: 100vh;
+    background-size: 110vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#board{
+    background: linear-gradient(rgb(183, 228, 183), rgb(236, 236, 152));
+    width: 89vmin;
+    height: 91vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+#scoreBox{
+    background: linear-gradient(rgb(186, 231, 186), rgb(233, 233, 161));
+    padding: 10px 20px;
+    border: 2px solid black;
+    position: absolute;
+    top: 29px;
+    right: 90px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#hiscoreBox{
+    background: linear-gradient(rgb(184, 230, 184), rgb(233, 233, 161));
+    padding: 10px 20px;
+    border: 2px solid black;
+    position: absolute;
+    top: 85px;
+    right: 39px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.head{
+    background: linear-gradient(rgb(226, 143, 143), rgb(218, 218, 145)); /* snake head */
+    border: 2px solid rgb(22, 5, 22);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple; /* snake baqi particles */
+    border: .25vmin solid white;
+    border-radius: 10px;
+}
+
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
